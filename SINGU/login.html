@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./active.css">
+    <title>login</title>
+</head>
+<body>
+  
+
+  <div class="form">
+
+   
+
+    <div class="tab-content">
+      <div id="signup">
+        <h1>login</h1>
+
+      
+
+          
+
+          <div class="field-wrap">
+           
+            <input type="email" required autocomplete="on" placeholder=" Email Address"  id="email" name="email" />
+          </div>
+
+          <div class="field-wrap">
+           
+            <input type="password" required autocomplete="on" placeholder="password " id="password" name="password" />
+          </div>
+
+          <button type="submit" class="button button-block" id='login' name="login" onclick="log()"/>login</button>
+
+        
+
+        <BR></BR>
+        <a href="./avtivite.html">cree un compte</a>
+      </div>
+
+
+
+  
+                             
+        <!-- <center>
+  
+    <div class="">
+        <h1 id='status'>login</h1>
+        <input type="text" id="email" name="email" placeholder="E-mail" />
+        <input type="password" id="password" name="password" placeholder="Password" />
+        
+        <input  type="submit" id='login' name="login" value="login" />
+    
+      </div> 
+      </center> -->
+      <!-- <div class="right">
+        <span class="loginwith">Sign in with<br />social network</span>
+        
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google">Log in with Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+<!-- <div id="login-box"> -->
+
+
+
+
+<!-- <script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+apiKey: "AIzaSyCTlW9SwEPepKEViMs0LuYWqyt0bZUYbFA",
+authDomain: "activite-1820d.firebaseapp.com",
+databaseURL: "https://activite-1820d-default-rtdb.firebaseio.com",
+projectId: "activite-1820d",
+storageBucket: "activite-1820d.appspot.com",
+messagingSenderId: "416516314452",
+appId: "1:416516314452:web:b600b95d5f7d658786e4c1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const auth = getAuth();
+
+
+// sighUp.addEventListener('click', (e)=>{
+   
+//     var email = document.getElementById('email').value;
+//     var password = document.getElementById('password').value;
+//     var username = document.getElementById('username').value;
+
+
+
+//     createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in 
+//     const user = userCredential.user;
+
+//     set(ref(database, 'users/' + user.uid),{
+//           username: username,
+//           email: email
+//       })
+
+
+
+//     alert('user cree');
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     alert( merrorMessage );
+//     // ..
+//   });
+
+// });
+
+login.addEventListener('click', (e)=>{
+
+    var email = document.getElementById('email').value;
+   var password = document.getElementById('password').value;
+  //  var status= document.getElementById('status').value;
+   
+
+
+  //  if(email=="admin@gmail.com" && password=="admin123"){
+  //   window.location.assign("PAGE.html");
+  //   alert("admin connecté")
+  // }
+ 
+    
+//  if(email=="admin@gmail.com" && password=="admin123"){
+//     window.location.assign("PAGE.htmll");
+//     //   alert('invalide')
+//     alert("admin connecté")
+//     } 
+
+  
+
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+
+//     if(email=="admin@gmail.com" && password=="admin123"){
+
+// window.location.assign("PAGE.html");
+// //   alert('invalide')
+// alert("admin connecté")
+// } 
+
+// else if( email=='email'  && password=='password'  ){
+// window.location.assign("user.html");
+
+// alert('user connecté')
+
+
+// } 
+
+let emaillogin= document.getElementById('emaillogin').value;
+    let passwordlogin=document.getElementById('passwordlogin').value;
+    const q = query(collection(db, "users"), where("email", "==", emaillogin));
+
+        
+let users ;
+        getDocs(q).then(docSnap => {
+            docSnap.forEach((doc)=> {
+                users= doc.data();
+            });
+            if (typeof users !== 'undefined') {
+                if (users.status ==="admin") {
+        document.getElementById('emaillogin').value ="";
+        document.getElementById('passwordlogin').value="";
+         window.location="./admin.html"
+    
+       
+      }else if (users.status ==="utilisateur") {
+        document.getElementById('emaillogin').value ="";
+        document.getElementById('passwordlogin').value="";
+        window.location="./guest.html"
+    
+      }else{
+      alert('don\'t exist')
+      }
+            }else{
+                alert('désolé vous ne figurez pas ici veuillez vous inscrire svp')
+            }
+            // console.log("Document data:", users[0]['email']);
+            console.log( users.status);
+        });
+    });
+
+
+
+
+
+
+
+    
+    // Signed in 
+    const user = userCredential.user;
+
+    const dt = new Date();
+    update(ref(database, 'users/' + user.uid),{
+          last_login: dt,
+        
+             
+      });
+      
+    // ...
+    
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert( errorMessage );
+  });
+
+});
+
+const user = auth.currentUser;
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+
+// logout.addEventListener('click',(e)=>{
+
+// signOut(auth).then(() => {
+//   // Sign-out successful.
+//   alert('user deconecté');
+// }).catch((error) => {
+//   // An error happened.
+//   const errorCode = error.code;
+//   const errorMessage = error.message;
+
+//      alert(errorMessage);
+// });
+
+// });
+
+
+// function log () {
+//   var email= document.getElementById("email").value;
+//   var password= document.getElementById("password").value;
+//   if(email=="admin@gmail.com" && password=="admin123"){
+//     window.location.assign("actiite.html");
+    
+//   }
+//   else{
+//       alert('invalide')
+//     } 
+  
+// }
+</script> -->
+</html>
+

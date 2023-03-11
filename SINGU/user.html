@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blue;">
+    
+
+
+    <center>
+        <h1 >PAGE User</h1>
+    </center>
+    <button>deconnexion</button>
+</body>
+
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyCTlW9SwEPepKEViMs0LuYWqyt0bZUYbFA",
+    authDomain: "activite-1820d.firebaseapp.com",
+    databaseURL: "https://activite-1820d-default-rtdb.firebaseio.com",
+    projectId: "activite-1820d",
+    storageBucket: "activite-1820d.appspot.com",
+    messagingSenderId: "416516314452",
+    appId: "1:416516314452:web:b600b95d5f7d658786e4c1"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+
+
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+
+logout.addEventListener('click',(e)=>{
+
+signOut(auth).then(() => {
+    
+  // Sign-out successful.
+  alert('user deconecté');
+}).catch((error) => {
+  // An error happened.
+  const errorCode = error.code;
+  const errorMessage = error.message;
+
+     alert(errorMessage);
+});
+
+});
+
+
+
+
+    
+</script>
+
+
+
+
+
+</html>
